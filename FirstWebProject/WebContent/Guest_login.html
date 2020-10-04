@@ -1,0 +1,38 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Guest Login</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="ch-cn">
+<script>
+
+	function validate() {
+		var guest_SSN = document.getElementById("guest_SSN");
+		var upass = document.getElementById("upass");
+		if(guest_SSN.value == ""){
+			alert("username can't be null");
+			return false;
+		}
+		
+		else if(upass.value ==""){
+			alert("password can't be null");
+			return false;
+		}
+		else
+			return true;
+	}
+
+</script>
+</head>
+<body>
+	<h4>Guest Login</h4>
+	<form method="post" action="guestlogin">
+		Guest_SSN:<input type="text" id="guest_SSN" name="guest_SSN"><br>
+		Password:<input type="password" id="upass" name="upass"><br>
+		<br>
+		<button type="submit" value="submit" onclick="return validate();">submit</button>
+		<button type="reset" value="reset">reset</button>
+	</form>
+</body>
+</html>

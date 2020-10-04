@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rental Agreement</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <link rel="stylesheet" href="/resources/demos/style.css">
+</head>
+<body>
+<script>
+function validate() {
+	var signing = document.getElementById("signing");
+	var startDate = document.getElementById("startDate");
+	var endDate = document.getElementById("endDate");
+	
+	if(signing.value == "" || startDate.value == "" || endDate.value == "" ){
+		alert("You need to fill all the information");
+		return false;
+	}
+	
+
+	else
+		return true;
+}
+$(document).ready(function(){
+		$("#startDate").datepicker();
+	});
+	
+	$(document).ready(function(){
+		$("#endDate").datepicker();
+	});
+	</script>
+<form method = "Post" action="booking.jsp">
+<h2>Term and Conditions</h2>
+<h4>1. Use of Property</h4>
+
+The Property leased shall only be used for residential purposes.<br>
+
+<h4>2. Utilities</h4>
+
+The Tenant agrees to pay for the utilities and other services used in the property on the continuity of the lease of the Property.<br>
+
+<h4>3. Furnishings</h4>
+
+The leased premises contains the following property furnishings: 8 cubic feet Refrigerator, gas stove, microwave oven, dishwasher, fully automatic washing machine, telephone. Damages and repairs shall be borne by the tenant.<br>
+
+<h4>4. Acknowledgment</h4>
+
+The parties hereby acknowledge and understand the terms herein set forth in this Agreement.<br><br>
+
+Rental Agreement ID: <input type="text" id="signing" name="signing"><br>
+Sign your name: <input type="text" id="signing" name="signing"><br>
+Start Date:<input type="text" id="startDate" name="startDate"><br>
+End Date:<input type="text" id="endDate" name="endDate"><br><br>
+<button type="submit" value="submit" onclick="return validate();">submit</button>
+<button type="reset" value="reset">reset</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review Page</title>
+<script>
+function validate() {
+	var review = document.getElementById("review");
+	if(review.value == "" ){
+		alert("You need to fill all the information");
+		return false;
+	}
+	else
+		return true;
+}
+</script>
+</head>
+<body>
+<form method="post" action="reviewServlet">
+<h4>Review Page</h4>
+
+Enter the property address that you want to review:<br>
+<input type="text" id="propAddress" name="propAddress" ><br><br>
+
+Ratings:<br>
+
+    <input type="radio" id="star5" name="ratings" value="5" />
+    <label for="star5">5 stars</label>
+    <input type="radio" id="star4" name="ratings" value="4" />
+    <label for="star4">4 stars</label>
+    <input type="radio" id="star3" name="ratings" value="3" />
+    <label for="star3">3 stars</label>
+    <input type="radio" id="star2" name="ratings" value="2" />
+    <label for="star2">2 stars</label>
+    <input type="radio" id="star1" name="ratings" value="1" />
+    <label for="star1">1 star</label><br><br>
+
+Cleanliness:<br>
+
+    <input type="radio" id="superClean" name="cleanliness" value="superClean" />
+    <label for="superClean" >Super Clean</label><br>
+    <input type="radio" id="clean" name="cleanliness" value="clean" />
+    <label for="clean">Clean</label><br>
+    <input type="radio" id="notClean" name="cleanliness" value="notClean" />
+    <label for="notClean">Not Clean</label><br><br>
+
+
+
+Write a review:<br>
+<input type="text" id="review" name="review" ><br><br>
+
+<button type="submit" value="submit" onclick="return validate();">submit</button>
+<button type="reset" value="reset">reset</button>
+</form>
+</body>
+</html>

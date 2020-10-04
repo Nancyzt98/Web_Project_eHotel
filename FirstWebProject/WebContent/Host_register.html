@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Host Register Page</title>
+<script>
+
+	function validate() {
+		var houseNum = document.getElementById("houseNum");
+		var houseStr = document.getElementById("houseStr");
+		var houseCity = document.getElementById("houseCity");
+		var houseProv = document.getElementById("houseProv");
+		var hostName = document.getElementById("hostName");
+		var host_SSN = document.getElementById("host_SSN");
+		var hostEmail = document.getElementById("hostEmail");
+		var hostPhone = document.getElementById("hostPhone");
+		var hostPwd = document.getElementById("hostPwd");
+		var hostPwdAgain = document.getElementById("hostPwdAgain");
+		if(houseNum.value == "" || houseStr.value == "" || houseCity.value == "" || houseProv.value == ""|| hostName.value == ""|| host_SSN.value == ""|| hostEmail.value == ""|| hostPhone.value == ""|| hostPwd.value == ""|| hostPwdAgain.value == "" ){
+			alert("You need to fill all the information");
+			return false;
+		}
+		
+		else if(hostPhone.value.length != 10){
+			alert("The length of phone number needs to be 10");
+			return false;
+		}
+
+		else
+			return true;
+	}
+
+</script>
+</head>
+<body>
+<form method = "post" action="hostRegister">
+<fieldset>
+<legend>Address</legend>
+House number:<input type="text" id="houseNum" name="houseNum"><br>
+Street:<input type="text" id="houseStr" name="houseStr"><br>
+City:<input type="text" id="houseCity" name="houseCity"><br>
+Province:<input type="text" id="houseProv" name="houseProv"><br>
+</fieldset>
+<br>
+<fieldset>
+<legend>Host Details</legend>
+Full name:<input type="text" id="hostName" name="hostName"><br>
+Host_SSN:<input type="text" id="host_SSN" name="host_SSN"><br>
+Email address:<input type="email" id="hostEmail" name="hostEmail"><br>
+Phone number:<input type="tel" id="hostPhone" name="hostPhone" pattern="[0-9]{3} [0-9]{3} [0-9]{4}"><br>
+Password:<input type="password" id="hostPwd" name="hostPwd"><br>
+</fieldset>
+<!-- Confirmed Password:<input type="password" id="hostPwdAgain" name="hostPwdAgain"><br><br> -->
+<br>
+<button type="submit" value="submit" onclick="return validate();">submit</button>
+<button type="reset" value="reset">reset</button>
+</form>
+
+</body>
+</html>

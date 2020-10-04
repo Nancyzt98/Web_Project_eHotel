@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property Page</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <link rel="stylesheet" href="/resources/demos/style.css">
+<script>
+
+	function validate() {
+		var propAddress = document.getElementById("propAddress");
+		var propType = document.getElementById("propType");
+		var roomType = document.getElementById("roomType");
+		var startDate = document.getElementById("startDate");
+		var endDate = document.getElementById("endDate");
+		var price = document.getElementById("price");
+		var paymentType = document.getElementById("paymentType");
+		var branch_id = document.getElementById("branch_id");
+		var host_ssn = document.getElementById("host_ssn");
+		
+		if(propAddress.value == "" || startDate.value == "" || endDate.value == "" ||price.value == ""||host_ssn.value == ""||branch_id.value ==""){
+			alert("You need to fill all the information");
+			return false;
+		}
+		
+
+		else
+			return true;
+	}
+	
+	$(document).ready(function(){
+		$("#startDate").datepicker();
+	});
+	
+	$(document).ready(function(){
+		$("#endDate").datepicker();
+	});
+
+</script>
+</head>
+<body>
+<form method = "Post" action="roomPostServlet">
+<h4>Please fill in the details of property</h4>
+Property Address:<input type="text" id="propAddress" name="propAddress"><br>
+Property Type:<br>
+			  <input type="radio" id="apartment" name="propType" value="apartment">
+			  <label for="apartment">Apartment</label><br>
+			  <input type="radio" id="bedBreak" name="propType" value="bedBreak">
+			  <label for="bedBreak">Bed&Breakfast</label><br>
+			  <input type="radio" id="uniqueHomes" name="propType" value="uniqueHomes">
+			  <label for="uniqueHomes">Unique Homes</label><br>
+			  <input type="radio" id="vacationHomes" name="propType" value="vacationHomes">
+			  <label for="vacationHomes">Vacation Homes</label><br>
+			  <input type="radio" id="otherType" name="propType" value="otherType">
+			  <label for="otherType">Other Types</label><br>
+			  
+Room Type:<br>
+			  <input type="radio" id="uniqueSpace" name="roomType" value="uniqueSpace">
+			  <label for="uniqueSpace">Unique Space</label><br>
+			  <input type="radio" id="privateRoom" name="roomType" value="privateRoom">
+			  <label for="privateRoom">Private Room</label><br>
+			  <input type="radio" id="sharedRoom" name="roomType" value="sharedRoom">
+			  <label for="sharedRoom">Shared Room</label><br>
+Available Date:<input type="text" id="startDate" name="startDate" placeholder="Start Date"> to <input type="text" id="endDate" name="endDate" placeholder="End Date"><br>
+Price:<input type="text" id="price" name="price"> CAD<br>
+Payment Type:<br>
+			  <input type="radio" id="cash" name="paymentType" value="cash">
+			  <label for="cash">Cash</label><br>
+			  <input type="radio" id="check" name="paymentType" value="check">
+			  <label for="check">Check</label><br>
+			  <input type="radio" id="creditCard" name="paymentType" value="creditCard">
+			  <label for="creditCard">Credit Card</label><br>
+			  <input type="radio" id="debitCard" name="paymentType" value="debitCard">
+			  <label for="debitCard">Debit Card</label><br>
+<!-- Guest_SSN:<input type="text" id="guest_SSN" name="guest_SSN" placeholder=Guest_SSN"> -->
+Branch_id:<input type="text" id="branch_id" name="branch_id"><br>
+Host_SSN:<input type="text" id="host_ssn" name="host_ssn"><br><br>
+<button type="submit" value="submit" onclick="return validate();">submit</button>
+<button type="reset" value="reset">reset</button>
+</form>
+
+</body>
+</html>

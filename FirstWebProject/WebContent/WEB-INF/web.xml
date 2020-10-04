@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+ <display-name>jspServletLoginTest</display-name>
+ <servlet>
+  <description></description>
+  <display-name>kkkkk</display-name>
+  <servlet-name>loginServlet</servlet-name>
+  <servlet-class>
+  servlet.EmployeeloginServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>loginServlet</servlet-name>
+  <url-pattern>/logintest</url-pattern>
+ </servlet-mapping>
+ 
+ <!-- add a customer register servlet here add a new customer in customer table -->
+ <servlet>
+ <description></description>
+ <display-name>anything</display-name>
+ <servlet-name>GuestRegisterServlet</servlet-name>
+ <servlet-class>servlet.GuestRegisterServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>GuestRegisterServlet</servlet-name>
+  <url-pattern>/guestRegister</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <description></description>
+ <display-name>guestlogin</display-name>
+ <servlet-name>GuestLoginServlet</servlet-name>
+ <servlet-class>servlet.GuestLoginServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>GuestLoginServlet</servlet-name>
+  <url-pattern>/guestlogin</url-pattern>
+ </servlet-mapping>
+ 
+ 
+<servlet>
+ <description></description>
+ <display-name>hostregister</display-name>
+ <servlet-name>HostRegisterServlet</servlet-name>
+ <servlet-class>servlet.HostRegisterServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>HostRegisterServlet</servlet-name>
+  <url-pattern>/hostRegister</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <description></description>
+ <display-name>hostlogin</display-name>
+ <servlet-name>hostloginServlet</servlet-name>
+ <servlet-class>servlet.HostLoginServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>hostloginServlet</servlet-name>
+  <url-pattern>/hostlogin</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <description></description>
+ <display-name>employeeLoginServlet</display-name>
+ <servlet-name>EmployeeLoginServlet</servlet-name>
+ <servlet-class>servlet.EmployeeLoginServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>EmployeeLoginServlet</servlet-name>
+  <url-pattern>/employeeLoginServlet</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <description></description>
+ <display-name>roompost</display-name>
+ <servlet-name>roomPostServlet</servlet-name>
+ <servlet-class>servlet.RoomPostServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>roomPostServlet</servlet-name>
+  <url-pattern>/Host_Posting</url-pattern>
+ </servlet-mapping>
+ 
+<servlet>
+ <description></description>
+ <display-name>roomBook</display-name>
+ <servlet-name>roombookServlet</servlet-name>
+ <servlet-class>servlet.RoomBookServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>RoomBookServlet</servlet-name>
+  <url-pattern>/roomBook</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <description></description>
+ <display-name>reviewServlet</display-name>
+ <servlet-name>roombookServlet</servlet-name>
+ <servlet-class>servlet.ReviewServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>ReviewServlet</servlet-name>
+  <url-pattern>/reviewServlet</url-pattern>
+ </servlet-mapping>
+
+
+
+ <welcome-file-list>
+  <welcome-file>index.html</welcome-file>
+ </welcome-file-list>
+</web-app>
+</element>

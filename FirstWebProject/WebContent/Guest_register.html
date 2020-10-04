@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Guest Register Page</title>
+<script>
+
+	function validate() {
+		var guestName = document.getElementById("guestName");
+		var guest_SSN = document.getElementById("guest_SSN");
+		var guestAddress = document.getElementById("guestAddress");
+		var guestEmail = document.getElementById("guestEmail");
+		var guestPhone = document.getElementById("guestPhone");
+		var guestPwd = document.getElementById("guestPwd");
+		var guestPwdAgain = document.getElementById("guestPwdAgain");
+		if(guestName.value == ""|| guest_SSN.value == ""|| guestAddress.value == ""|| guestEmail.value == ""|| guestPhone.value == "" || guestPwd.value == ""|| guestPwdAgain.value == ""|| usrName.value == ""){
+			alert("You need to fill all the information");
+			return false;
+		}
+		
+		else if(guestPhone.value.length != 10){
+			alert("The length of phone number needs to be 10");
+			return false;
+		}
+		
+		else if(guestPwd.value != guestPwdAgain.value){
+			alert("passwords need to be same");
+			return false;
+		}
+
+		else
+			return true;
+	}
+
+</script>
+</head>
+<body>
+<form method = "post" action="guestRegister">
+<h4>Guest Register</h4>
+Full name:<input type="text" id="guestName" name="guestName"><br>
+Guest_SSN:<input type="text" id="guest_SSN" name="guest_SSN"><br>
+Address:<input type="text" id="guestAddress" name="guestAddress"><br>
+Email address:<input type="email" id="guestEmail" name="guestEmail"><br>
+Phone number:<input type="text" id="guestPhone" name="guestPhone"><br>
+Password:<input type="password" id="guestPwd" name="guestPwd"><br><br>
+<button type="submit" value="submit" onclick="return validate();">submit</button>
+<button type="reset" value="reset">reset</button>
+</form>
+
+</body>
+</html>
