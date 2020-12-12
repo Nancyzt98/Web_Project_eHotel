@@ -1,4 +1,4 @@
-# Web Project: eHotel Web App
+# Web Project: eHotel Web Application
 ### The DBMS and the programming languages used in the application: 
 * SQL, Java, HTML, JavaScript, PHP, CSS
 
